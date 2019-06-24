@@ -1,13 +1,11 @@
-n = int(input())
-
-times = list(map(int, input().split()))
-
-def sums(arr):
-	hap = 0
-	res = []
-	for i in arr:
-		hap+=i
-		res.append(hap)
-	return sum(res)
-times.sort()
-print(sums(times))
+t = int(input())
+import sys
+for i in range(t):
+	n = int(sys.stdin.readline().rstrip())
+	grades = []
+	cnt = 0 
+	for j in range(n):
+		jum = list(map(int, sys.stdin.readline().rstrip().split()))
+		grades.append(jum)
+		grades=sorted(grades, key=lambda x : x[0])
+	print(grades)
